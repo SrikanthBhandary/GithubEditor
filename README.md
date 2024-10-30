@@ -1,6 +1,6 @@
 # GitHub Editor
 
-**GitHub Editor** is a command-line tool written in Go that allows users to clone GitHub repositories, modify files using regex, and commit and push changes back to the repository. This tool simplifies the process of making quick edits to files in GitHub projects. May be you can use it for helm chart image update and use it in argocd application.
+**GitHub Editor** is a command-line tool written in Go that allows users to clone GitHub repositories, modify files using regex, and commit and push changes back to the repository. This tool simplifies the process of making quick edits to files in GitHub projects. May be you can use it for helm chart image tag update and use it in argocd application.
 
 ## Features
 
