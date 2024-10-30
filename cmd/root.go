@@ -48,12 +48,13 @@ var (
 	regEx         string
 	valueToUpdate string
 	token         string
+	username      string
 	rootCmd       = &cobra.Command{
 		Use:   "ghedit",
 		Short: "ghe",
 		Long:  `Use this command to edit the specif file in the github and commit it`,
 		Run: func(cmd *cobra.Command, args []string) {
-			gh, err := github.NewGitHubWrapper(token, "SrikanthBhandary")
+			gh, err := github.NewGitHubWrapper(token, username)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -101,6 +102,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVarP(&regEx, "regEx", "e", "", "regex to find and replace")
 	rootCmd.PersistentFlags().StringVarP(&valueToUpdate, "val", "v", "", "value to update")
 	rootCmd.PersistentFlags().StringVarP(&token, "token", "t", "", "value to update")
+	rootCmd.PersistentFlags().StringVarP(&username, "username", "u", "", "github username")
 
 }
 
